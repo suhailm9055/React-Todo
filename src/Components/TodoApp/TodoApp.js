@@ -46,7 +46,7 @@ export default class TodoApp extends Component {
                 
                 <ul>
                     {this.state.ItemsArr.map((data,index)=>{
-                       return <span><li key={index}>{data}   <span></i> <i  className="fas fa-trash-alt" onClick={()=>{this.deleteVal(index)}}></i></span></li>
+                       return <span><li key={index}>{data}   <span><i  className="fas fa-trash-alt" onClick={()=>{this.deleteVal(index)}}></i></span></li>
                        
                        </span> 
                     })}
