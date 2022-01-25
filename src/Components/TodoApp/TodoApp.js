@@ -34,16 +34,22 @@ export default class TodoApp extends Component {
     render() {
         console.log(this.state.ItemsArr);
         return (
-            <div className="wholeDiv">
-                <div className="TodoAppmain">
+            <div className="container">
+<div className="">
+
+
+            <div className="wholeDiv col-lg-12">
+                <div className="TodoAppmain text-center">
                 <form action="" onSubmit={this.storeItems}>
                 <h1>Todo App</h1>
                 <input type="text"  value={this.state.input}  onChange={this.handleChange} placeholder="Enter items here"/>
                 
                 </form>
                 </div>
-                
-                
+                </div>
+                <div className="col">
+
+
                 <ul>
                     {this.state.ItemsArr.map((data,index)=>{
                        return <span><li key={index}>{data}   <span><i  className="fas fa-trash-alt" onClick={()=>{this.deleteVal(index)}}></i></span></li>
@@ -51,12 +57,15 @@ export default class TodoApp extends Component {
                        </span> 
                     })}
                 </ul>
+                </div>
                 
+</div>
 
                 
 
                 
 
+            
             </div>
         )
     }
